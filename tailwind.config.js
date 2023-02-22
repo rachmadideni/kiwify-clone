@@ -1,3 +1,4 @@
+const { fontFamily } = require("tailwindcss/defaultTheme");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -8,6 +9,12 @@ module.exports = {
           DEFAULT: "#5850EC",
         },
       },
+      backgroundImage: (theme) => ({
+        linkedIn: "url('/src/assets/images/linked-in-large-bg.png')"
+      }),
+      fontFamily: {
+        'sans': ['Rubik', ...fontFamily.sans]
+      }
     },
   },
   plugins: [],
